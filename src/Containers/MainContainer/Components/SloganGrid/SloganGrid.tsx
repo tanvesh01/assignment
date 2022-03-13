@@ -12,6 +12,8 @@ const UNIQUE_SLOGANS = [
 const getRandomIndex = (lengthOfArray: number) => {
   return Math.floor(Math.random() * lengthOfArray);
 };
+
+// Randomly choosing any one of the unique slogan inserting it into an array
 const data = [...new Array(18)].map(() => {
   return UNIQUE_SLOGANS[getRandomIndex(UNIQUE_SLOGANS.length)];
 });
@@ -121,13 +123,14 @@ const Slogan = styled("div", {
   display: "flex",
   alignItems: "center",
   borderRadius: "4px",
-  "&:hover": {
-    cursor: "pointer",
-  },
+  cursor: "pointer",
+
+  // Tooltip positioning when hovering on Slogan
   [`&:hover ${ToolTip}`]: {
     top: "33%",
     left: "-33%",
     display: "block",
+    // changing tooltip position on smaller screens
     [`@media ${QUERIES.laptopAndDown}`]: {
       top: "-33%",
       left: "0",

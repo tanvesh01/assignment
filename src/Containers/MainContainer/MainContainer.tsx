@@ -1,5 +1,6 @@
 import { styled } from "@styles/stitches";
 import React, { useState } from "react";
+import { QUERIES } from "src/constants";
 import {
   Button,
   Heading,
@@ -20,6 +21,7 @@ const MainContainer = () => {
         </Description>
         <StyledLabel htmlFor="keyword_input">Word for your slogan</StyledLabel>
         <InputWithClearButton
+          id="keyword_input"
           placeholder="Enter your Keyword..."
           value={sloganWord}
           setValue={setSloganWord}
@@ -46,7 +48,7 @@ const HeadingContainer = styled("div", {
   justifyContent: "space-between",
   marginBottom: "32px",
 
-  [`@media (max-width:${736}px)`]: {
+  [`@media ${QUERIES.tabletAndDown}`]: {
     flexWrap: "wrap",
     gap: "1rem 0",
   },

@@ -6,6 +6,7 @@ interface InputWithClearButtonType {
   placeholder: string;
   name: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
+  id: string;
 }
 
 export const InputWithClearButton: React.FC<InputWithClearButtonType> = ({
@@ -13,17 +14,19 @@ export const InputWithClearButton: React.FC<InputWithClearButtonType> = ({
   setValue,
   placeholder,
   name,
+  id,
 }) => {
   return (
     <ParentContainer>
       <StyledInput
+        id={id}
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
         name={name}
       />
-      <AdornmentContainer onClick={() => setValue("")}>
-        {value && <XIcon />}
+      <AdornmentContainer onClick={() => setValue("")} aria-label="Clear">
+        {value && <XIcon color="#4D4D4D" />}
       </AdornmentContainer>
     </ParentContainer>
   );
@@ -39,7 +42,6 @@ const StyledInput = styled("input", {
   border: "none",
   borderTopRightRadius: 0,
   borderBottomRightRadius: 0,
-  "&:focus": { boxShadow: "none" },
 });
 
 const AdornmentContainer = styled("button", {
@@ -54,8 +56,8 @@ const AdornmentContainer = styled("button", {
   border: 0,
   cursor: "pointer",
   "& svg": {
-    width: "1.5rem",
-    height: "1.5rem",
+    width: "1.4rem",
+    height: "1.4rem",
   },
 });
 const ParentContainer = styled("div", {
@@ -63,7 +65,4 @@ const ParentContainer = styled("div", {
   border: "1px solid $black85",
   display: "flex",
   borderRadius: 4,
-  [`&:focus-within `]: {
-    boxShadow: `$inputShadow`,
-  },
 });
