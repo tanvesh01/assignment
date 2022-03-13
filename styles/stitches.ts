@@ -10,25 +10,9 @@ export const { styled, css, getCssText, keyframes } = createStitches({
       black12: "#1A181E",
       primaryBlue: "#146EB4",
     },
-    space: {
-      1: "5px",
-      2: "10px",
-      3: "15px",
-    },
-    fontSizes: {
-      1: "12px",
-      2: "13px",
-      3: "15px",
-    },
-    media: {
-      bp1: "(min-width: 640px)",
-      bp2: "(max-width: 768px)",
-      bp3: "(min-width: 1024px)",
-    },
-    fonts: {
-      heading: "Haas",
-      para: "'Inter', sans-serif",
-    },
+    space: {},
+    fontSizes: {},
+    fonts: {},
     fontWeights: {},
     lineHeights: {},
     letterSpacings: {},
