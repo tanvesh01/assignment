@@ -40,7 +40,12 @@ const ProductsGrid = () => {
         {FEATURE_DATA.map((data, index) => {
           return (
             <Card key={index}>
-              <Image src={data.image} width={352} height={200} />
+              <Image
+                src={data.image}
+                width={352}
+                height={200}
+                alt={`${data.heading} Image`}
+              />
               <CardHeading>{data.heading}</CardHeading>
               <Para>{data.desc}</Para>
             </Card>

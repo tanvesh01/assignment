@@ -29,7 +29,12 @@ const FeaturesGrid = () => {
         {FEATURE_DATA.map((data, index) => {
           return (
             <Card key={index}>
-              <Image src={data.image} width={72} height={72} />
+              <Image
+                src={data.image}
+                width={72}
+                height={72}
+                alt={`${data.heading} Image`}
+              />
               <CardHeading>{data.heading}</CardHeading>
               <Para>{data.desc}</Para>
             </Card>

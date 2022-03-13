@@ -18,7 +18,12 @@ const Footer = () => {
         <p>Dukaan 2020, All rights reserved.</p>
         <FooterContentContainer small>
           <span>Made in </span>{" "}
-          <Image src="/images/Indian_flag.png" width={27} height={17} />
+          <Image
+            src="/images/Indian_flag.png"
+            width={27}
+            height={17}
+            alt="Indian Flag"
+          />
         </FooterContentContainer>
       </FooterInnerContainer>
     </FooterContainer>
