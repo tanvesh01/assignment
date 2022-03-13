@@ -141,7 +141,7 @@ const Slogan = styled("div", {
 const SloganGridContainer = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
-  gap: "1rem",
+  gap: "20px 32px",
   [`@media ${QUERIES.tabletAndDown}`]: {
     gridTemplateColumns: "1fr",
   },
