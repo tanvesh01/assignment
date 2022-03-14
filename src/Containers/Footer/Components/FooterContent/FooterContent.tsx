@@ -5,27 +5,27 @@ const FooterContent = () => {
   return (
     <React.Fragment>
       <div>
-        <StyledLinks>Contact</StyledLinks>
-        <StyledLinks>FAQs</StyledLinks>
+        <StyledLinks href="#">Contact</StyledLinks>
+        <StyledLinks href="#">FAQs</StyledLinks>
       </div>
       <div>
-        <StyledLinks>Tutorials</StyledLinks>
-        <StyledLinks>Blog</StyledLinks>
+        <StyledLinks href="#">Tutorials</StyledLinks>
+        <StyledLinks href="#">Blog</StyledLinks>
       </div>
       <div>
-        <StyledLinks>Privacy</StyledLinks>
-        <StyledLinks>Banned Items</StyledLinks>
+        <StyledLinks href="#">Privacy</StyledLinks>
+        <StyledLinks href="#">Banned Items</StyledLinks>
       </div>
       <div>
-        <StyledLinks>About</StyledLinks>
-        <StyledLinks>
+        <StyledLinks href="#">About</StyledLinks>
+        <StyledLinks href="#">
           Jobs <CounterTag>3</CounterTag>{" "}
         </StyledLinks>
       </div>
       <div>
-        <StyledLinks>Facebook</StyledLinks>
-        <StyledLinks>Twitter</StyledLinks>
-        <StyledLinks>LinkedIn</StyledLinks>
+        <StyledLinks href="#">Facebook</StyledLinks>
+        <StyledLinks href="#">Twitter</StyledLinks>
+        <StyledLinks href="#">LinkedIn</StyledLinks>
       </div>
     </React.Fragment>
   );

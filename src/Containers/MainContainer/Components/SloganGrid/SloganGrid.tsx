@@ -32,6 +32,7 @@ const SloganGrid = () => {
               onClick={() => {
                 setCurrentString("Copied!");
               }}
+              role="button"
             >
               <ToolTip>
                 <p>{currentString}</p>
@@ -116,26 +117,30 @@ const ToolTip = styled("div", {
   borderRadius: "4px",
 });
 
-const Slogan = styled("div", {
+const Slogan = styled("button", {
   position: "relative",
   padding: "19px 16px",
   background: "$black95",
   display: "flex",
   alignItems: "center",
+  justifyContent: "flex-start",
+  textAlign: "start",
   borderRadius: "4px",
   cursor: "pointer",
-
-  // Tooltip positioning when hovering on Slogan
-  [`&:hover ${ToolTip}`]: {
-    top: "33%",
-    left: "-33%",
-    display: "block",
-    // changing tooltip position on smaller screens
-    [`@media ${QUERIES.laptopAndDown}`]: {
-      top: "-33%",
-      left: "0",
+  fontSize: "1rem",
+  border: "0",
+  // Tooltip positioning when hovering or on focus on Slogan
+  [`&:hover ${ToolTip},&:focus ${ToolTip}, &:focus-within ${ToolTip}, &:focus-visible ${ToolTip}`]:
+    {
+      top: "33%",
+      left: "-33%",
+      display: "block",
+      // changing tooltip position on smaller screens
+      [`@media ${QUERIES.laptopAndDown}`]: {
+        top: "-33%",
+        left: "0",
+      },
     },
-  },
 });
 
 const SloganGridContainer = styled("div", {
